@@ -2,13 +2,18 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "eslint-config": "^0.3.0",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
   }
 }
