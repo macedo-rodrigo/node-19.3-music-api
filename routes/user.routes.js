@@ -100,8 +100,11 @@ router.post("/", async (req, res) => {
     const createdUser = await user.save();
     return res.status(201).json(createdUser);
   } catch (error) {
-    console.error(error);
-    res.status(500).json(error);
+    if (error?.name === "ValidationError") {
+      console.error(error);
+    } else {
+      res.status(500).json(error);
+    }
   }
 });
 
@@ -128,6 +131,7 @@ router.put("/:id", async (req, res) => {
     const id = req.params.id;
     const userUpdated = await User.findByIdAndUpdate(id, req.body, {
       new: true,
+      runValidators: true
     });
     if (userUpdated) {
       res.json(userUpdated);

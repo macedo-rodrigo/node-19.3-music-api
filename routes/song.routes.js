@@ -93,6 +93,7 @@ router.put("/:id", async (req, res) => {
     const id = req.params.id;
     const songUpdated = await Song.findByIdAndUpdate(id, req.body, {
       new: true,
+      runValidators: true
     });
     if (songUpdated) {
       res.json(songUpdated);

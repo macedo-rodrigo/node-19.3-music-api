@@ -7,10 +7,12 @@ const songSchema = new Schema(
     title: {
       type: String,
       required: true,
+      trim: true,
     },
     duration: {
       type: String,
       required: true,
+      trim: true,
     },
     year: {
       type: Number,

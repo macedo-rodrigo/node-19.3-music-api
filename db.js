@@ -22,7 +22,7 @@ const connect = async () => {
     console.log(`Conectado a la base de datos ${name} en el host ${host}`);
     return database;
   } catch (error) {
-    console.error(error);
+    console.error(error.name);
     console.log("Error al conectar. Intentado nuevamente en 5 segundos...");
     setTimeout(connect, 5000);
   }

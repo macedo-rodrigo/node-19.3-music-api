@@ -105,6 +105,7 @@ router.put("/:id", async (req, res) => {
     const id = req.params.id;
     const artistUpdated = await Artist.findByIdAndUpdate(id, req.body, {
       new: true,
+      runValidators: true
     });
     if (artistUpdated) {
       res.json(artistUpdated);
