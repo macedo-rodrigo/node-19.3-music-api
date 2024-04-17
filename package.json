@@ -10,8 +10,7 @@
     "seed:songs": "node ./seeds/song.seed.js",
     "seed:song-relations": "node ./seeds/song-relations.seed.js",
     "seed:all": "npm run seed:users && npm run seed:artists && npm run seed:songs && npm run seed:song-relations",
-    "start:watch": "node --watch index.js",
-    "start": "node index.js",
+    "start": "node --watch index.js",
     "lint": "eslint",
     "prepare": "husky install"
   },
@@ -24,7 +23,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.0"
   },
-  "author": "Fran Linde",
+  "author": "Rodri",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
