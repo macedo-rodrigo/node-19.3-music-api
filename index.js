@@ -18,7 +18,7 @@ const main = async () => {
   const router = express.Router();
   router.get("/", (req, res) => {
     res.send(
-      `Esta es la home de nuestra API. Estamos utilizando la BBDD de ${database.connection.name} `
+      `Estaaaaaaaa es la home de nuestra API. Estamos utilizando la BBDD de ${database.connection.name} `
     );
   });
   router.get("*", (req, res) => {
